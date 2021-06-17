@@ -81,7 +81,7 @@ def callback():
         token = req_token(code)
         session['token'] = token
 
-        return redirect('https://www.surprisify.me/generate_playlist')
+        return redirect('https://mymusic-list.herokuapp.com/generate_playlist')
 
 
 # Generate playlist view
@@ -121,7 +121,7 @@ def generate_playlist():
             db.session.add(user)
             db.session.commit()
 
-        return redirect('https://www.surprisify.me/success')
+        return redirect('https://mymusic-list.herokuapp.com/success')
 
     else:
         if session.get('token'):
